@@ -1,17 +1,11 @@
 import { Route, Routes } from "react-router";
 import Home from "./components/Home";
 
-
-
-
-function App() {
+export default function App() {
 
   return (
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   )
 }
-
-export default App

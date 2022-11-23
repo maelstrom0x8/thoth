@@ -1,15 +1,14 @@
-import { useLogs } from "../services/Hooks";
+import { Box } from "@mui/material";
+import { useState } from "react";
 import { EmptyLog, LogList } from "./LogView";
 
-import { Box } from "@mui/material";
-
-
+import { useLogs } from "../../services/Hooks";
 
 export default function ListPanel() {
     const { logs } = useLogs();
 
     return (
-        <Box className="list-panel-container" sx={{backgroundColor: "#212121", color: "#eee"}}>
+        <Box className="list-panel-container" >
             <Box className="list-content">
                 {logs.length ? <LogList logs={logs} /> : <EmptyLog />}
             </Box>

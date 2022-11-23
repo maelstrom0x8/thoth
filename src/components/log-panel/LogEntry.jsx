@@ -20,8 +20,8 @@ export default function LogEntry({ open, onClose }) {
     return (
         <Backdrop sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1, position: "fixed" }}
             open={open}>
-            <Box className="entry-modal-body" sx={{ position: "absolute", right: "1em", bottom: "1em", top: "10em", width: "75%", backgroundColor: "primary.main", borderRadius: ".3em .3em" }}>
-                <Box className="header" sx={{ display: "flex", justifyContent: "flex-start", backgroundColor: "#eee", color: "primary.main", borderRadius: ".5em .5em 0 0", padding: ".2em 0 0 .5em" }}>
+            <Box className="entry-modal-body" sx={{ position: "absolute", right: "1em", bottom: "1em", top: "10em", width: "75%", backgroundColor: "#eee", borderRadius: ".3em .3em" }}>
+                <Box className="header" sx={{ display: "flex", justifyContent: "flex-start", backgroundColor: "#eee", color: "#eee", borderRadius: ".5em .5em 0 0", padding: ".2em 0 0 .5em" }}>
                     <Typography >New Entry</Typography>
                     <IconButton sx={{ marginLeft: "auto", padding: 0 }} onClick={onClose} size="large"><CloseIcon /></IconButton>
                 </Box>
