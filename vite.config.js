@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+const path = require('path')
 
 export default defineConfig({
   plugins: [react()],
@@ -9,7 +10,7 @@ export default defineConfig({
     strictPort: true,
     open: true,
     https: false,
-    proxy : {
+    proxy: {
       '/api': {
         target: 'http://localhost:8000'
       },
@@ -17,5 +18,11 @@ export default defineConfig({
         target: 'http://localhost:8080'
       }
     }
+  },
+  resolve: {
+    alias: {
+      "~": path.resolve('src')
+    }
   }
+
 })
