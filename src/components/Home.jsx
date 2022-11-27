@@ -4,9 +4,8 @@ import { Box, Paper } from "@mui/material";
 import { Add } from "@mui/icons-material";
 import { blue } from "@mui/material/colors";
 
-import LogEntry from "./log-panel/LogEntry";
-import LogPanel from "./log-panel/LogPanel";
-
+import LogPanel from "./LogPanel";
+import Entry from "./Entry";
 
 export default function Home() {
 
@@ -22,7 +21,6 @@ export default function Home() {
 
     return (
         <>
-            
             <Box className="home-container"
                 backgroundColor={blue[50]}
                 sx={{ display: "flex", justifyContent: "left", position: "fixed", top: "0", bottom: "0", right: "0", left: "0" }}>
@@ -36,10 +34,8 @@ export default function Home() {
                 {/* Log panel goes here */}
 
                 <LogPanel/>
-
-                <LogEntry open={entryOpen} onClose={entryPanelClose} />
             </Box>
-
+            <Entry open={entryOpen} onClose={entryPanelClose} />
         </>
     )
 }

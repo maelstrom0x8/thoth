@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router";
-import { SignIn, SignUp } from "./AuthViews";
+
 import Home from "./Home";
+import SignUp from "./AuthViews/SignUp";
+import SignIn from "./AuthViews/SignIn"
 
 export default function App() {
 

@@ -1,6 +1,6 @@
 import { Typography, Box } from "@mui/material";
 
-export function EmptyLog() {
+export function EmptyLogView() {
     return (
         <Box className="log-container empty-log-container" 
         sx={{
@@ -8,14 +8,6 @@ export function EmptyLog() {
         }}>
             <Typography fontSize={"2em"}>Your log is empty</Typography>
             <Typography>To add new log entries click <b>New Log Entry</b>.</Typography>
-        </Box>
-    )
-}
-
-export function LogList({ logs = [] }) {
-    return (
-        <Box className="log-container">
-
         </Box>
     )
 }

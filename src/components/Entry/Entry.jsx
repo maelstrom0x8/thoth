@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 
 
-export default function LogEntry({ open, onClose }) {
+export const Entry = ({ open, onClose })  => {
 
     const [subject, setSubject] = useState("");
     const [body, setBody] = useState("");
@@ -28,7 +28,7 @@ export default function LogEntry({ open, onClose }) {
 
                 <Box className="modal-content" sx={{ display: "flex", flexDirection: "column", padding: ".1em", justifyContent: "end" }}>
 
-                    <TextField className='subject-input' sx={{padding: ".2em",color: "white"}} backgroundColor="white" id="standard-basic" fullWidth placeholder="Subject" variant="standard" onChange={e => { setSubject(e.target.value) }} />
+                    <TextField className='subject-input' sx={{padding: ".2em",color: "white"}} id="standard-basic" fullWidth placeholder="Subject" variant="standard" onChange={e => { setSubject(e.target.value) }} />
 
                     <TextField className="body-input-box" variant="standard" multiline sx={{ padding: ".2em", resize: "vertical", flex: "2 0 75%" }} onChange={e => { setBody(e.target.value) }} />
 
